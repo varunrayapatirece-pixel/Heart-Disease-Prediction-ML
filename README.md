@@ -1,58 +1,153 @@
-# Heart Disease Prediction Using Machine Learning
+# ❤️ Heart Disease Prediction Using Machine Learning
 
-## Overview
-An end-to-end machine learning project that predicts the presence of heart disease using patient-related clinical features.
+An end-to-end Machine Learning project that predicts the presence of heart disease using patient-related clinical features. The project explores multiple classification algorithms, performs hyperparameter optimization, evaluates model performance, and provides model explainability through SHAP.
 
-The project explores multiple classification algorithms and ensemble learning techniques to compare predictive performance.
+The best-performing model, XGBoost, is integrated into a Streamlit application for interactive predictions.
 
-## Technologies Used
+## 🚀 Project Overview
+
+This project demonstrates a complete machine learning workflow, from data exploration and preprocessing to model training, evaluation, explainability, and deployment.
+
+**Key Highlights**
+- Exploratory Data Analysis (EDA)
+- Data preprocessing and feature transformation
+- Comparison of multiple classification algorithms
+- Hyperparameter tuning using RandomizedSearchCV
+- Stratified 5-fold cross-validation
+- Model evaluation using multiple performance metrics
+- Feature importance using Permutation Importance
+- Model explainability using SHAP
+- Interactive prediction interface using Streamlit
+
+## 🛠️ Technologies Used
+
 - Python
-- Pandas
-- NumPy
-- Matplotlib
+- Pandas & NumPy
+- Matplotlib & Seaborn
 - Scikit-learn
+- XGBoost
+- SHAP
 - Joblib
+- Streamlit
 - Jupyter Notebook
 
-## Machine Learning Algorithms
-- Logistic Regression
-- K-Nearest Neighbors (KNN)
-- Decision Tree
-- Random Forest
-- Support Vector Machine (SVM)
-- Gradient Boosting
-- Soft Voting Classifier
-- Stacking Classifier
+## 🤖 Machine Learning Algorithms
 
-## Project Workflow
-1. Data Collection and Loading
-2. Data Cleaning and Preprocessing
-3. Exploratory Data Analysis
-4. Feature Engineering
-5. Model Training
-6. Cross-Validation
-7. Model Comparison
-8. Ensemble Learning
-9. Model Evaluation
-10. Model Saving
+The project evaluates the following classification algorithms:
 
-## Evaluation Metrics
+1. Logistic Regression
+2. K-Nearest Neighbors (KNN)
+3. Decision Tree
+4. Random Forest
+5. Support Vector Machine (SVM)
+6. Gradient Boosting
+7. Extra Trees Classifier
+8. XGBoost Classifier
+
+Hyperparameter tuning is performed on selected models using RandomizedSearchCV.
+
+## 📊 Model Evaluation
+
+Models are evaluated using:
+
 - Accuracy
 - Precision
 - Recall
 - F1-Score
 - ROC-AUC
 
-## Project Structure
+### Best Model: XGBoost
+
+| Metric | Result |
+|---|---:|
+| Cross-Validation ROC-AUC | 70.60% |
+| Test ROC-AUC | 71.40% |
+
+The final model is selected based on cross-validation performance and subsequently evaluated on an unseen test dataset.
+
+## 🔍 Model Explainability
+
+To improve model interpretability, the project incorporates:
+
+- **Permutation Feature Importance:** Identifies features that contribute to predictive performance.
+- **SHAP Analysis:** Explains global feature contributions and individual model predictions.
+
+## 🌐 Streamlit Application
+
+The project includes an interactive Streamlit application that provides:
+
+- Patient clinical feature inputs
+- Heart disease prediction
+- Predicted probability visualization
+- Interactive user interface
+
+## 📁 Project Structure
+
 ```text
 Heart-Disease-Prediction-ML/
 │
 ├── Heart_Disease_End_to_End_ML_GitHub.ipynb
+├── app.py
 ├── README.md
 ├── requirements.txt
 ├── heart_disease_raw_practice.csv
-└── artifacts/
+│
+├── saved_models/
+│   └── heart_disease_xgboost.pkl
+│
+└── assets/
+    ├── confusion_matrix.png
+    ├── roc_curve.png
+    └── feature_importance.png
 ```
 
-## Disclaimer
-This project is intended for educational purposes only and should not be used for actual medical diagnosis.
+## ⚙️ Installation and Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/Heart-Disease-Prediction-ML.git
+```
+
+### 2. Navigate to the project directory
+
+```bash
+cd Heart-Disease-Prediction-ML
+```
+
+### 3. Create a virtual environment (optional)
+
+```bash
+python -m venv venv
+```
+
+Activate the environment:
+
+Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+### 4. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+### 5. Run the Streamlit application
+```bash
+streamlit run app.py
+```
+## 📌 Future Enhancements
+
+- Improve model performance through additional experimentation.
+- Add interactive model performance visualizations.
+- Enhance prediction explanations with SHAP.
+- Deploy the Streamlit application online.
+
+## ⚠️ Disclaimer
+
+This project is intended strictly for educational and demonstration purposes. It uses a synthetic practice dataset and is not validated for real-world medical diagnosis or clinical decision-making.
+
+└── artifacts/
+```
