@@ -4,6 +4,9 @@ An end-to-end Machine Learning project that predicts the presence of heart disea
 
 The best-performing model, XGBoost, is integrated into a Streamlit application for interactive predictions.
 
+Live project
+https://heart-disease-prediction-ml-acxk2yuemp7p2cfwttxqyg.streamlit.app/
+
 ## 🚀 Project Overview
 
 This project demonstrates a complete machine learning workflow, from data exploration and preprocessing to model training, evaluation, explainability, and deployment.
