@@ -18,9 +18,14 @@ MODEL_PATH = (
     / "heart_disease_xgboost.pkl"
 )
 
+
 @st.cache_resource
 def load_model():
-    return joblib.load(MODEL_PATH)
+    try:
+        return joblib.load(MODEL_PATH)
+    except Exception as e:
+        st.error(f"Model loading failed: {type(e).__name__}: {e}")
+        st.stop()
 
 model = load_model()
 
