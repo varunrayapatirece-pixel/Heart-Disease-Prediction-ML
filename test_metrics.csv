@@ -1,0 +1,2 @@
+selected_model,test_accuracy,test_precision,test_recall,test_f1,test_roc_auc
+Logistic Regression,0.6833333333333333,0.7068965517241379,0.6612903225806451,0.6833333333333333,0.7255283648498331
